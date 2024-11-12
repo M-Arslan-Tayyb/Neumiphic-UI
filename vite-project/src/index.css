@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color variables */
+  /* --bg-color: #EAEBEF; */
+  --primary-color: #006564;
+  --gradient-start: #3ac79a; /* Starting color of the gradient */
+  --gradient-end: #62eb80;   /* Ending color of the gradient */
+  --text-color: #141313;
+  --accent-color: #3AA29C;
+  --dark-accent: #003838;
+  --front-color: #0000008F;
+  
+
+
+  /* Font settings */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color scheme and background */
+  color-scheme: light;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  /* Text rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Utility classes for colors */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+.front-color{
+  color:var(--front-color)
+}
+
+
+  
+
+
+.bg-gradient {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.bg-dark-accent {
+  background-color: var(--dark-accent);
+}
+
+/* Add more utility classes as needed */
+
+/* You can keep the media query for dark mode preference if you want to support it */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    color: rgba(255, 255, 255, 0.87);
+    /* background-color: #242424; */
+  }
+  /* Add more dark mode styles if needed */
+}
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  background-color: #efefef;
+}
+
+.floating-card {
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(1px);
+  transition: transform 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: scale(1.05);
+}

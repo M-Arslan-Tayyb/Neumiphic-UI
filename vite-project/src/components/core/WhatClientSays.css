@@ -1,0 +1,176 @@
+.what-client-says {
+    padding: 6rem 2rem;
+    display: block !important; 
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+.client-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: block !important; 
+}
+
+.what-client-says h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #017369;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+}
+
+.testimonials-slider {
+    position: relative;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: block !important; /* Force display */
+}
+
+.testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+    display: block !important; 
+}
+
+.testimonial-card.active {
+    color: white;
+    /* box-shadow: inset 12px 12px 24px rgba(0, 0, 0, 0.25) !important; */
+    box-shadow: inset 14px 11px 20px rgba(0, 0, 0, 0.25), 12px 12px 24px rgba(0, 0, 0, 0.25), -12px -12px 24px rgba(255, 255, 255, 0.9), inset 0px 1px 20px rgba(255, 255, 255, 0.9) !important;
+    padding: 1.3rem 0 !important;
+    
+
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.client-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+}
+
+.rating span {
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-button {
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
+                -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.slider-button:hover {
+    transform: translateY(-2px);
+}
+
+.slider-button svg {
+    width: 20px;
+    height: 20px;
+    color: #017369;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .what-client-says {
+        padding: 4rem 1.5rem;
+    }
+
+    .what-client-says h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .testimonial-card {
+        max-width: 320px;
+        padding: 1.5rem !important;
+    }
+
+    .client-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .what-client-says h1 {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        max-width: 280px;
+        padding: 1.25rem !important;
+    }
+
+    .slider-button {
+        width: 36px;
+        height: 36px;
+    }
+}

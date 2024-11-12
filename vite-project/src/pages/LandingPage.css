@@ -1,0 +1,349 @@
+:root {
+    --gradient-start: #3Ae2aC;
+    --gradient-end: #82C691;
+    --primary-color: #006564;
+}
+
+.hero-container {
+    width: 100%;
+    overflow-x: hidden;
+    transition: margin-top 0.3s ease-in-out;
+    /* padding-top: 100px; */
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    overflow: visible;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    z-index: 1005;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add this for absolute positioning context */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2; /* Place hero image above rating */
+}
+
+.rateAndReview {
+    position: absolute;
+    /* bottom: -20px; */
+    right: 13px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    z-index: 1; /* Place behind hero image */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transform: translateZ(0);
+}
+
+.rateAndReview img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-self: center;
+
+}
+
+.rateAndReview p {
+    font-size: 0.55rem;
+    color: #006564;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+.heading1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin: 0 !important;
+    /* margin-bottom: 0.5rem; */
+}
+
+.heading2 {
+    margin-top: 0 !important;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background:linear-gradient(to right,var(--primary-color),var(--gradient-start),rgba(255, 255, 255, 0.247));
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #006564;
+    z-index: 5;
+}
+
+.email-signup {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.email-signup :nth-child(2) {
+   font-size: 0.8rem;
+}
+
+
+.email-input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    box-shadow: 
+        inset -4px -4px 8px rgba(255, 255, 255, 0.8),
+        inset 4px 4px 8px rgba(0, 0, 0, 0.15);
+        background-color: var(--bg-color);
+}
+
+.early-access {
+    font-size: 0.9rem;
+    color: #003838;
+    background-color:#01736936;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-weight: 400;
+}
+.stylishLines{
+    /* height: 28px; */
+    max-width: 1200px;
+    position: relative;
+}
+
+.stylishLines :nth-child(1){
+    position:absolute;
+    top:-25rem;
+    z-index: -1;
+}
+
+/* company section */
+
+#company-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 3.5rem;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+
+#company-section > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    /* opacity: 0;  */
+}
+
+#company-section img {
+    max-height: 35px;
+    width: auto;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+/* Custom button styles for this section */
+#company-section .custom-button {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: default;
+} 
+
+                            /* about us */
+
+#about-us {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+
+@media (max-width: 670px) {
+    .stylishLines :nth-child(1){
+        display: none;
+    }
+}
+@media (max-width: 1015px) and (min-width: 860px) {
+    .stylishLines :nth-child(1){
+        top:-16rem
+    }
+}
+@media (max-width: 860px) {
+    .rateAndReview {
+        display: none; 
+        opacity: 0; 
+    }
+    
+    .hero-image {
+        flex-direction: column;
+        width: 75%;
+    }
+    .stylishLines :nth-child(1){
+        top:-60rem;
+    }
+    .hero-container {
+        padding-top: 70px;
+    }
+
+    .hero-container.menu-open {
+        padding-top: 350px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        /* max-width: 100%; */
+        
+    }
+
+    .divider {
+        margin: 1rem auto;
+    }
+
+    .email-signup {
+        flex-direction: row;
+    }
+
+    .heading1 {
+        font-size: 1.5rem;
+    }
+
+    .heading2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rateAndReview {
+        padding: 0.75rem;
+    }
+    
+    .rateAndReview img {
+        width: 80px;
+    }
+    .hero {
+        padding: 1rem;
+    }
+
+    .heading1 {
+        font-size: 1.2rem;
+    }
+
+    .heading2 {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+    .email-signup {
+        flex-direction: column;
+
+    }
+    .email-signup :nth-child(2) {
+        flex-direction: column;
+        width: 30%;
+        padding: 0.6rem;
+        font-size: 0.7rem;
+        
+    }
+    .email-signup   {
+        /* flex-direction: column; */
+        /* width: 100% !important; */
+        
+    }
+}
+
+@media (max-width: 860px) {
+    #company-section {
+        margin: 2rem auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #company-section > div:last-child {
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    #company-section img {
+        max-height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    #company-section > div:last-child {
+        gap: 1.5rem;
+    }
+
+    #company-section img {
+        max-height: 20px;
+    }
+    #company-section .custom-button {
+        
+        font-size: 0.7rem;
+        
+
+       
+    } 
+}

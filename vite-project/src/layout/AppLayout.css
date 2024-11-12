@@ -1,0 +1,9 @@
+/* flex flex-col min-h-screen bg-[#a1EBEF] overflow-x-hidden */
+.root-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    min-width: 100vw;
+    position: relative;
+}
