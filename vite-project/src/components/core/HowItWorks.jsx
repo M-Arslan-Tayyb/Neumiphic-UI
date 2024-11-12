@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './HowItWorks.css'
-import rightImage from '../../assets/images/HowItWorks.png'
+import rightImage from '../../assets/images/howItWorks.png'
 import CustomButton from '../common/Button'
 import NeumorphicBox from '../common/NeumorphicBox'
 import { useGSAP } from '@gsap/react'
